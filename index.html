@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>efeu.art</title>
+</head>
+<body>
+    <div class="heading">
+        <h1 id="title">e</h1>
+        <span id="cursor">
+            <svg
+   id="cursor-svg"
+   viewBox="0 0 7 20"
+   version="1.1"
+   id="layer1">
+  <rect
+     style="fill-opacity:1;stroke:none;paint-order:fill markers stroke"
+     width="7"
+     height="2"
+     x="0"
+     y="0"
+     id="rect6077" />
+  <rect
+     style="fill-opacity:1;stroke:none;paint-order:fill markers stroke"
+     width="7"
+     height="2"
+     x="0"
+     y="18"
+     id="rect6079" />
+  <rect
+     style="fill-opacity:1;stroke:none;paint-order:fill markers stroke"
+     width="2.5"
+     height="20"
+     x="2.25"
+     y="0"
+     id="rect6081" />
+</svg>
+        </span>
+    </div>
+    <h2>coming soon</h2>
+
+    <script>
+        const title = document.getElementById('title');
+        const title_text = ['e','f','e','u','.','a','r','t'];
+        let title_written = [];
+        (function myLoop(i) {
+            setTimeout(function() {
+                title_written.push(title_text[title_text.length - i]);
+                console.log(title_written);
+                title.innerHTML = title_written.join('');
+            if (--i) myLoop(i);
+            }, 200)
+        })(title_text.length);
+    </script>
+</body>
+</html>
